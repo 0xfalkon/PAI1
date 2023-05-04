@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Obliczenia</title>
+  <script src="JS/obliczenia.js"></script>
+  <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+</head>
+<body>
+<div id="kontener">
+  <div id="baner">
+    <h1>Dodawanie</h1>
+  </div>
+  <div id="menu">
+    <ul id="nav">
+      <li> <a href="index.html">Podstawowe znaczniki </a> </li>
+      <li> <a href="tabele.html">Tworzenie tabel </a> </li>
+      <li> <a href="">Budowa formularzy</a>
+        <ul>
+          <li><a href="formularze.html">Pola formularza</a></li>
+          <li><a href="obliczenia.html">Obliczenia w formularzu</a></li>
+        </ul></li>
+      <li><a href="galeria.html">Galeria</a></li>
+    </ul>
+  </div>
+  <div id="tresc">
+    <fieldset>
+      <legend>Pożyczka</legend>
+      <table><tbody>
+        <tr><td><label for="kwota">Kwota:</label></td><td><input id="kwota" /></td></tr>
+        <tr><td><label for="raty">Liczba rat:</label></td><td><input id="raty" /></td></tr>
+        <tr><td><label for="procent">Procent:</label></td><td><input id="procent" /></td></tr>
+        <tr><td><label for="rata">Rata:</label></td><td><input id="rata" value="" disabled/></td></tr>
+        <tr><td><label for="suma">Kwota z odsetkami:</label></td><td><input id="suma" value="" disabled/></td></tr>
+        <tr><td><button onclick="oblicz()">Oblicz wartość</button></td>
+      </tbody></table>
+    </fieldset>
+  </div>
+  </div>
+  <div id="pasek">
+    <div class="box">
+      <h3>Walidatory:</h3>
+      <ul>
+        <li> <a href="https://validator.w3.org/">HTML</a></li>
+        <li> <a href="https://jigsaw.w3.org/css-validator/">CSS</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Kursy:</h3>
+      <ul>
+        <li> <a href="https://www.w3schools.com/html/"> HTML </a></li>
+        <li> <a href="https://www.w3schools.com/css/"> CSS </a></li>
+        <li> <a href="https://www.w3schools.com/js/"> JS </a></li>
+        <li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="stopka">
+    &copy;MF
+  </div>
+</body>
+</html>

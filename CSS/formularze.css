@@ -1,0 +1,117 @@
+h1, h2, h3 {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: #f2e4cf;
+    color: black;
+}
+
+#kontener {
+    background: white;
+    width: 90%;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    background: #a96036;
+    color: black;
+    text-align: center;
+}
+
+#menu {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    text-align: left;
+    overflow: hidden;
+    font-family: calibri, tahoma;
+}
+
+ul#nav li {
+    list-style-type: none;
+    float: left;
+    background: #a96036;
+    margin-left: 3px;
+}
+
+ul#nav li:hover {
+    list-style-type: none;
+    float: left;
+    background: #a9606a;
+    margin-left: 3px;
+}
+
+ul#nav li a {
+    display : block;
+    padding : 4pt;
+    text-decoration : none;
+}
+
+ul#nav li li a {
+    width: 160px;
+}
+
+ul#nav li li:hover {
+    background: #a9606a;
+}
+
+ul#nav li ul {
+    overflow: hidden;
+    display: none;
+}
+
+ul#nav li:hover ul {
+    position: absolute;
+    background: #a9606a;
+    padding: 0;
+    display: block;
+    width: 177px;
+}
+
+#tresc {
+    background: #b5a197;
+    float: left;
+    width: 75%;
+    padding: 1%;
+}
+
+#pasek {
+    float: right;
+    width: 20%;
+    padding: 1%;
+}
+
+#stopka {
+    background: #a96036;
+    clear: both;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    text-align: center;
+}
+
+*.box {
+    background: #a96036;
+    padding: 5px;
+    margin: 5px;
+    font-size: 90%;
+}
+
+a {color:#ffffb0}
+
+input[type=text], input[type=email] {
+    transition: width 0.4s ease-in-out;
+    width: 20%
+}
+input[type=text]:focus, input[type=email]:focus {
+    width: 50%;
+}
+
+input[type=number] {
+    width: 8%;
+}
