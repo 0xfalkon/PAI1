@@ -20,8 +20,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-#menu {
-    float: left;
+nav {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -35,22 +34,23 @@ h1, h2, h3 {
 
 ul#nav li {
     list-style-type: none;
-    float: left;
+    display: inline-flex;
+    flex-direction: row;
     background: #a96036;
     margin-left: 3px;
 }
 
 ul#nav li:hover {
     list-style-type: none;
-    float: left;
+    display: inline-flex;
     background: #a9606a;
     margin-left: 3px;
 }
 
 ul#nav li a {
-    display : block;
-    padding : 4pt;
-    text-decoration : none;
+    display: block;
+    padding: 4pt;
+    text-decoration: none;
 }
 
 ul#nav li li a {
@@ -76,18 +76,20 @@ ul#nav li:hover ul {
 
 #tresc {
     background: #b5a197;
-    float: left;
+    display: inline-flex;
+    flex-direction: column;
     width: 75%;
     padding: 1%;
 }
 
-#pasek {
-    float: right;
+aside {
+    display: inline-flex;
+    flex-direction: column;
     width: 20%;
     padding: 1%;
 }
 
-#stopka {
+footer {
     background: #a96036;
     clear: both;
     width: 100%;
@@ -103,3 +105,21 @@ ul#nav li:hover ul {
 }
 
 a {color:#ffffb0}
+
+@media screen and (max-width: 720px) {
+    ul#nav li {
+        display: flex;
+    }
+
+    ul#nav li:hover {
+        display: flex;
+    }
+
+    #tresc {
+        display: flex;
+    }
+
+    aside {
+        display: flex;
+    }
+}

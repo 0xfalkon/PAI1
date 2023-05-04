@@ -9,21 +9,21 @@
 
 <body>
 <div id="kontener">
-  <div id="baner">
+  <header>
     <h1>Szybki kurs HTML</h1>
-  </div>
-  <div id="menu">
+  </header>
+  <nav>
     <ul id="nav">
       <li> <a href="index.html">Podstawowe znaczniki </a> </li>
       <li> <a href="tabele.html">Tworzenie tabel </a> </li>
       <li> <a href="">Budowa formularzy</a>
         <ul>
-          <li><a href="formularze.html" >Pola formularza</a></li>
-          <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+          <li><a href="formularze.html">Pola formularza</a></li>
+          <li><a href="obliczenia.html">Obliczenia w formularzu</a></li>
         </ul></li>
-      <li><a href="galeria.html" title="">Galeria</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
     </ul>
-  </div>
+  </nav>
   <div id="tresc">
     <h2>Podstawowe znaczniki formluarza HTML to:</h2>
     <ul style="list-style-type:square">
@@ -35,27 +35,27 @@
     </ul>
     <h2>Przykładowy formluarz HTML:</h2>
     <form action="mailto:mateuszfalkiewicz1@gmail.com" method="post">
-      <label for="naz">Nazwisko:</label><input type="text" id="naz" name="nazwisko" /><br/>
-      <label for="wi">Wiek:</label><input type="number" id="wi" name="wiek" min="0" /><br/>
+      <label for="naz">Nazwisko:</label><input type="text" id="naz" name="nazwisko" required/><br/>
+      <label for="wi">Wiek:</label><input type="number" id="wi" name="wiek" min="0" required/><br/>
       <label for="pan">Państwo:</label>
-      <select id="pan" name="państwo">
+      <select id="pan" name="państwo" required>
         <option value="pl">Polska</option>
         <option value="!pl">Nie Polska</option>
       </select><br/>
-      <label for="em">Adres e-mail:</label><input type="email" id="em" name="email" /><br/>
+      <label for="em">Adres e-mail:</label><input type="email" id="em" name="email"  title="example@org.com" required/><br/>
       <h3>Zamawiam tutorial z języka:</h3>
       <input type="checkbox" id="p" name="lang" value="PHP" /><label for="p">PHP</label>
       <input type="checkbox" id="c" name="lang" value="C" /><label for="c">C/C++</label>
       <input type="checkbox" id="j" name="lang" value="Java" /><label for="j">Java</label>
       <h3>Sposób zapłaty:</h3>
-      <input type="radio" id="eu" name="pay" value="eurocard" /><label for="eu">eurocard</label>
+      <input type="radio" id="eu" name="pay" value="eurocard" required/><label for="eu">eurocard</label>
       <input type="radio" id="vi" name="pay" value="visa" /><label for="vi">visa</label>
       <input type="radio" id="pb" name="pay" value="przelew" /><label for="pb">przelew bankowy</label><br/>
       <input type="submit" value="Wyślij" />
       <input type="reset" value="Wyczyść" />
     </form>
   </div>
-  <div id="pasek">
+  <aside>
     <div class="box">
       <h3>Walidatory:</h3>
       <ul>
@@ -72,10 +72,10 @@
         <li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
       </ul>
     </div>
-  </div>
-  <div id="stopka">
+  </aside>
+  <footer>
     &copy;MF
-  </div>
+  </footer>
 </div>
 </body>
 </html>
