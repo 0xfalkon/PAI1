@@ -35,7 +35,7 @@
     </ul>
     <h2>Przykładowy formluarz HTML:</h2>
     <form action="mailto:mateuszfalkiewicz1@gmail.com" method="post">
-      <label for="naz">Nazwisko:</label><input type="text" id="naz" name="nazwisko" required/><br/>
+      <label for="naz">Nazwisko:</label><input type="text" id="naz" name="nazwisko" pattern="([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}|([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}-([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}" required/><br/>
       <label for="wi">Wiek:</label><input type="number" id="wi" name="wiek" min="0" required/><br/>
       <label for="pan">Państwo:</label>
       <select id="pan" name="państwo" required>
