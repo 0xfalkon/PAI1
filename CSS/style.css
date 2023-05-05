@@ -1,8 +1,3 @@
-h1, h2, h3 {
-    margin:0;
-    padding:0;
-}
-
 body {
     background: #f2e4cf;
     color: black;
@@ -15,6 +10,8 @@ body {
 }
 
 h1, h2, h3 {
+    margin:0;
+    padding:0;
     background: #a96036;
     color: black;
     text-align: center;
@@ -29,7 +26,8 @@ nav {
 #nav {
     text-align: left;
     overflow: hidden;
-    font-family: calibri, tahoma;
+    font-family: calibri, tahoma, serif;
+    display: flex;
 }
 
 ul#nav li {
@@ -74,12 +72,14 @@ ul#nav li:hover ul {
     width: 177px;
 }
 
-#tresc {
+main {
     background: #b5a197;
     display: inline-flex;
     flex-direction: column;
     width: 75%;
     padding: 1%;
+    border-radius: 10px;
+    box-shadow: 3px -3px dimgray;
 }
 
 aside {
@@ -87,6 +87,7 @@ aside {
     flex-direction: column;
     width: 20%;
     padding: 1%;
+    box-sizing: border-box;
 }
 
 footer {
@@ -121,5 +122,11 @@ a {color:#ffffb0}
 
     aside {
         display: flex;
+        flex-direction: row;
+    }
+
+    *.box {
+        display: flex;
+        flex-direction: row;
     }
 }

@@ -75,6 +75,7 @@ main {
     background: #b5a197;
     display: inline-flex;
     flex-direction: column;
+    flex-flow: wrap;
     width: 75%;
     padding: 1%;
     border-radius: 10px;
@@ -105,18 +106,6 @@ footer {
 }
 
 a {color:#ffffb0}
-
-input[type=text], input[type=email] {
-    transition: width 0.4s ease-in-out;
-    width: 20%
-}
-input[type=text]:focus, input[type=email]:focus {
-    width: 50%;
-}
-
-input[type=number] {
-    width: 8%;
-}
 
 @media screen and (max-width: 720px) {
     ul#nav li {
