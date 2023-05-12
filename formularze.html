@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Formluarze</title>
+  <script src="JS/walidacja.js"></script>
   <link rel="stylesheet" href="CSS/formularze.css" type="text/css" />
 </head>
 
@@ -34,23 +35,47 @@
       <li>&lt;button&gt; - pole formularza typu przycisk</li>
     </ul>
     <h2>Przykładowy formluarz HTML:</h2>
-    <form action="mailto:mateuszfalkiewicz1@gmail.com" method="post">
-      <label for="naz">Nazwisko:</label><input type="text" id="naz" name="nazwisko" pattern="([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}|([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}-([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}" required/><br/>
-      <label for="wi">Wiek:</label><input type="number" id="wi" name="wiek" min="0" required/><br/>
-      <label for="pan">Państwo:</label>
-      <select id="pan" name="państwo" size="1">
-        <option value="pl">Polska</option>
-        <option value="!pl">Nie Polska</option>
-      </select><br/>
-      <label for="em">Adres e-mail:</label><input type="email" id="em" name="email"  title="example@org.com" required/><br/>
+    <form action="mailto:mateuszfalkiewicz1@gmail.com" method="post" onsubmit="return sprawdz()">
+      <table>
+        <tr>
+          <td><label for="naz">Nazwisko:</label></td>
+          <td><input type="text" id="naz" name="nazwisko" size="30" pattern="([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}|([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}-([A-ZĄĘŁÓĆŃŚŹŻ])([a-ząęłóćńśźż]){1,15}" required/></td>
+          <td id="nazw_error" class="czerwone"></td>
+        </tr>
+        <tr>
+          <td><label for="wi">Wiek:</label></td>
+          <td><input type="number" id="wi" name="wiek" size="5" min="0" required/></td>
+          <td id="wiek_error" class="czerwone"></td>
+        </tr>
+        <tr>
+          <td><label for="pan">Państwo:</label></td>
+          <td>
+            <select id="pan" name="państwo" size="1">
+              <option value="pl" selected="selected">Polska</option>
+              <option value="!pl">Nie Polska</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="em">Adres e-mail:</label></td>
+          <td><input type="email" id="em" name="email" size="30" title="example@org.com" required/></td>
+          <td id="email_error" class="czerwone"></td>
+        </tr>
+      </table>
       <h3>Zamawiam tutorial z języka:</h3>
-      <input type="checkbox" id="p" name="lang" value="PHP" /><label for="p">PHP</label>
-      <input type="checkbox" id="c" name="lang" value="C" /><label for="c">C/C++</label>
-      <input type="checkbox" id="j" name="lang" value="Java" /><label for="j">Java</label>
+      <p>
+        <input type="checkbox" id="p" name="lang" value="PHP" /><label for="p">PHP</label>
+        <input type="checkbox" id="c" name="lang" value="C" /><label for="c">C/C++</label>
+        <input type="checkbox" id="j" name="lang" value="Java" /><label for="j">Java</label>
+        <span id="produkt_error" class="czerwone"></span>
+      </p>
       <h3>Sposób zapłaty:</h3>
-      <input type="radio" id="eu" name="pay" value="eurocard" required/><label for="eu">eurocard</label>
-      <input type="radio" id="vi" name="pay" value="visa" /><label for="vi">visa</label>
-      <input type="radio" id="pb" name="pay" value="przelew" /><label for="pb">przelew bankowy</label><br/>
+      <p>
+        <input type="radio" id="eu" name="pay" value="eurocard" required/><label for="eu">eurocard</label>
+        <input type="radio" id="vi" name="pay" value="visa" /><label for="vi">visa</label>
+        <input type="radio" id="pb" name="pay" value="przelew" checked="checked" /><label for="pb">przelew bankowy</label>
+        <span id="zaplata_error" class="czerwone"></span><br />
+      </p>
       <input type="submit" value="Wyślij" />
       <input type="reset" value="Wyczyść" />
     </form>
